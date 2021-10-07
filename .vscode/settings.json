@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "toz",
+            "database": "${workspaceFolder:python_docker}/toz.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
