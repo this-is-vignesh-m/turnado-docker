@@ -9,7 +9,7 @@ from tornado.options import define, options
 
 
 define("port", default=8888, help="run on the given port", type=int)
-define("db_host", default="127.0.0.1", help="project database host")
+define("db_host", default="db", help="project database host")
 define("db_port", default=5432, help="project database port")
 define("db_database", default="rootdb", help="project database name")
 define("db_user", default="root", help="project database user")

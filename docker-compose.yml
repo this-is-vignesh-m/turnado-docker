@@ -2,6 +2,16 @@ version: '3'
 
 
 services:
+  db:
+    image: postgres
+    # ports:
+    #   - "5432:5432"
+    environment:
+      - POSTGRES_DB=rootdb
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_HOST=localhost
+
   web:
     build: .
     command: python3 main.py
@@ -9,3 +19,5 @@ services:
       - .:/app
     ports:
       - "8888:8888"
+    depends_on:
+      - db
